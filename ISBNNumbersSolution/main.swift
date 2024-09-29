@@ -62,6 +62,18 @@ func getOneThreeSum(digit11: Int, digit12: Int, digit13: Int) -> Int {
 }
 
 // Quick tests
-print(getOneThreeSum(digit11: 9, digit12: 4, digit13: 8))   // 120
-print(getOneThreeSum(digit11: 0, digit12: 5, digit13: 2))   // 108
+//print(getOneThreeSum(digit11: 9, digit12: 4, digit13: 8))   // 120
+//print(getOneThreeSum(digit11: 0, digit12: 5, digit13: 2))   // 108
+
+func categorize(oneThreeSum: Int) -> Bool {
+    if oneThreeSum % 10 == 0 {
+        return true
+    } else {
+        return false
+    }
+}
+
+// Quick tests
+print(categorize(oneThreeSum: 120)) // true
+print(categorize(oneThreeSum: 108)) // false
 
