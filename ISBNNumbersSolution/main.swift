@@ -74,6 +74,34 @@ func categorize(oneThreeSum: Int) -> Bool {
 }
 
 // Quick tests
-print(categorize(oneThreeSum: 120)) // true
-print(categorize(oneThreeSum: 108)) // false
+//print(categorize(oneThreeSum: 120)) // true
+//print(categorize(oneThreeSum: 108)) // false
+
+func report(digit11: Int, digit12: Int, digit13: Int) -> String {
+    
+    let sum = getOneThreeSum(
+        digit11: digit11,
+        digit12: digit12,
+        digit13: digit13
+    )
+
+    let result = categorize(oneThreeSum: sum)
+    
+    if result == true {
+        return """
+                The 1-3 sum is \(sum)
+                The ISBN number 9780921418\(digit11)\(digit12)\(digit13) is a valid ISBN number.
+                """
+    } else {
+        return """
+                The 1-3 sum is \(sum)
+                The ISBN number 9780921418\(digit11)\(digit12)\(digit13) is NOT a valid ISBN number.
+                """
+    }
+    
+}
+
+// Quick tests
+print(report(digit11: 9, digit12: 4, digit13: 8)) // yes
+print(report(digit11: 0, digit12: 5, digit13: 2)) // no
 
