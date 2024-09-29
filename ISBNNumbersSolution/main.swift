@@ -102,6 +102,22 @@ func report(digit11: Int, digit12: Int, digit13: Int) -> String {
 }
 
 // Quick tests
-print(report(digit11: 9, digit12: 4, digit13: 8)) // yes
-print(report(digit11: 0, digit12: 5, digit13: 2)) // no
+//print(report(digit11: 9, digit12: 4, digit13: 8)) // yes
+//print(report(digit11: 0, digit12: 5, digit13: 2)) // no
 
+// INTERACTIVE VERSION
+
+// 1. Input
+let eleventhDigit = getInput(withPrompt: "Digit 11?", minimum: 0, maximum: 9)
+let twelthDigit = getInput(withPrompt: "Digit 12?", minimum: 0, maximum: 9)
+let thirteenthDigit = getInput(withPrompt: "Digit 13?", minimum: 0, maximum: 9)
+
+// 2. Process
+let result = report(
+    digit11: eleventhDigit,
+    digit12: twelthDigit,
+    digit13: thirteenthDigit
+)
+
+// 3. Output
+print(result)
